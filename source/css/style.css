@@ -7,7 +7,7 @@
 }
 body{
     margin: 0;
-    background-color: black;
+    background-color: #fff;
     color: #999999;
     font: 400 15px/1 'Roboto', sans-serif;
 }
@@ -117,10 +117,18 @@ blockquote span::before,
 .title.section-title span:first-child {
     margin-bottom: 22px;
 }
+.title.section-title::after {
+    margin-top: 40px;
+}
 .default-text {
     font-size: 15px;
     line-height: 1.6;
     font-weight: 400;
+    color: #999999;
+}
+.text-section {
+    text-align: center;
+    margin-bottom: 90px;
 }
 blockquote, .blockquote {
     font: 300 24px/1.5 'Roboto', sans-serif;
@@ -148,11 +156,12 @@ blockquote span,
 .btn.btn-transparent {
     border: 3px solid #fff;
     color: #fff;
+    transition: all linear .5s;
 }
 .btn.btn-transparent:hover {
     border-color: #f38181;
     color: #f38181;
-    transition: all linear .5s;
+
 }
 header#header {
     color: #ffffff;
@@ -171,14 +180,29 @@ header#header nav {
 header#header nav a {
     transition: all linear .25s;
     padding-bottom: 0;
+    position: relative;
 }
 header#header nav a + a {
     margin-left: 50px;
 }
+header#header nav a::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: #fce38a;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: all linear .25s;
+}
 header#header nav a:hover {
     color: #fce38a;
-    border-bottom: 3px solid #fce38a;
-    padding-bottom: 12px;
+}
+header#header nav a:hover::after {
+    opacity: 1;
+    bottom: -12px;
 }
 
 /* ===== Default Components End ===== */
@@ -214,5 +238,95 @@ header#header nav a:hover {
     margin-top: 30px;
 }
 /* ----- Inner end ----- */
+
+/* ----- About Us start ----- */
+
+.about-us .about-us-item {
+    background-color: #95e1d3;
+    position: relative;
+}
+.about-us .about-us-item img {
+    transition: all linear .2s;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.about-us .about-us-item:hover img {
+    top: -10px;
+    left: -10px;
+}
+.about-us .about-us-item .wrap-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(252,227,138,1);
+    background: -moz-linear-gradient(left, rgba(252,227,138,1) 0%, rgba(243,129,129,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(252,227,138,1)), color-stop(100%, rgba(243,129,129,1)));
+    background: -webkit-linear-gradient(left, rgba(252,227,138,1) 0%, rgba(243,129,129,1) 100%);
+    background: -o-linear-gradient(left, rgba(252,227,138,1) 0%, rgba(243,129,129,1) 100%);
+    background: -ms-linear-gradient(left, rgba(252,227,138,1) 0%, rgba(243,129,129,1) 100%);
+    background: linear-gradient(to right, rgba(252,227,138,1) 0%, rgba(243,129,129,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fce38a', endColorstr='#f38181', GradientType=1 );
+    opacity: 0;
+    transition: all linear .2s;
+    color: #fff;
+    display: flex;
+    text-align: center;
+}
+.about-us .about-us-item:hover .wrap-item {
+    opacity: .9;
+    top: -10px;
+    bottom: 10px;
+    right: 10px;
+    left: -10px;
+}
+.about-us .about-us-item .wrap-item .item-description {
+    margin: auto;
+    font-size: 26px;
+}
+.about-us .about-us-item .wrap-item .item-description span {
+    display: block;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+}
+/* ----- About Us end ----- */
+
+/* ----- Numbers Start ----- */
+
+.numbers {
+    background-color: #95e1d3;
+    color: #ffffff;
+    text-align: center;
+}
+.numbers .row-numbers {
+    display: flex;
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    border-right: 1px solid rgba(255, 255, 255, .3);
+}
+.numbers .row-numbers .number-item {
+    width: 20%;
+    padding: 90px 0;
+}
+.numbers .row-numbers .number-item + .number-item {
+    border-left: 1px solid rgba(255, 255, 255, .3);
+}
+.numbers .row-numbers .number-item span {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.numbers .row-numbers .number-item span:first-child {
+    font-size: 72px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* ----- Numbers End ----- */
 
 /* ===== Custom Style End ===== */

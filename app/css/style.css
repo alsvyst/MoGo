@@ -252,24 +252,26 @@ header#header nav a:hover::after {
 }
 /* ----- Inner end ----- */
 
-/* ----- About Us start ----- */
+/* ----- About Us + Our-team start ----- */
 
-.about-us .about-us-item {
+.about-us .about-us-item, .our-team .our-team-item {
     background-color: #95e1d3;
     position: relative;
 }
-.about-us .about-us-item img {
+.about-us .about-us-item img, .our-team .our-team-item img {
     -webkit-transition: all linear .2s;
     transition: all linear .2s;
     position: relative;
     top: 0;
     left: 0;
 }
-.about-us .about-us-item:hover img {
+.about-us .about-us-item:hover img, .our-team .our-team-item:hover img {
     top: -10px;
     left: -10px;
 }
-.about-us .about-us-item .wrap-item {
+.about-us .about-us-item .wrap-item,
+.our-team .our-team-item .wrap-item,
+.some-work .some-work-item .wrap-item {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -289,14 +291,16 @@ header#header nav a:hover::after {
     display: flex;
     text-align: center;
 }
-.about-us .about-us-item:hover .wrap-item {
+.about-us .about-us-item:hover .wrap-item,
+.our-team .our-team-item:hover .wrap-item {
     opacity: .9;
     top: -10px;
     bottom: 10px;
     right: 10px;
     left: -10px;
 }
-.about-us .about-us-item .wrap-item .item-description {
+.about-us .about-us-item .wrap-item .item-description,
+.our-team .our-team-item .wrap-item .item-description {
     margin: auto;
     font-size: 26px;
 }
@@ -308,7 +312,41 @@ header#header nav a:hover::after {
     font-family: 'Montserrat', sans-serif;
     margin-top: 10px;
 }
-/* ----- About Us end ----- */
+.our-team .our-team-item .wrap-item .item-description a {
+    font-size: 30px;
+    color: #f38181;
+    background-color: #fce38a;
+    display: block;
+    text-align: center;
+    -webkit-transition: all linear .2s;
+    transition: all linear .2s;
+}
+.our-team .our-team-item .wrap-item .item-description a + a {
+    border-left: 1px solid #e99881;
+}
+.our-team .our-team-item .wrap-item .item-description a:hover {
+    background-color: #f38181;
+    color: #ffffff;
+}
+.our-team .our-team-item .wrap-item .item-description i {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    /*margin-left: -3px;*/
+}
+.our-team .our-team-title {
+    text-align: center;
+    margin-top: 30px;
+}
+.our-team .our-team-title span + span {
+    font: 300 15px/1 'Roboto', sans-serif;
+    font-style: italic;
+    color: #999999;
+    margin-top: 15px;
+    display: block;
+}
+
+/* ----- About Us + Our-team end ----- */
 
 /* ----- Numbers Start ----- */
 
@@ -403,5 +441,53 @@ header#header nav a:hover::after {
 }
 
 /* ----- Devices End ----- */
+
+/* ----- Quotes Start ----- */
+
+.quotes {
+    background-color: #f8f8f8;
+}
+
+/* ----- Quotes End ----- */
+
+/* ----- Logos Start ----- */
+
+.logos-template {
+    background-color: #f8f8f8;
+}
+.logos-template .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+/* ----- Logos End ----- */
+
+/* ----- Some Work Start  ----- */
+
+.some-work {
+    padding-bottom: 0;
+}
+
+.some-work .some-work-items {
+    width: 100%;
+}
+.some-work .some-work-items > div {
+    width: 25%;
+}
+.some-work .some-work-items .some-work-item {
+    position: relative;
+}
+.some-work .some-work-item:hover .wrap-item {
+    opacity: .9;
+}
+
+/* ----- Some Work End  ----- */
 
 /* ===== Custom Style End ===== */

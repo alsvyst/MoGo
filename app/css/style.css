@@ -631,4 +631,36 @@ header#header nav a:hover::after {
 
 /* ----- Reviews End  ----- */
 
+/* ----- What People Say Start  ----- */
+
+.what-people-say {
+    background: url('../img/what-people-say-bg.jpg') no-repeat center / cover;
+}
+.what-people-say .people-item {
+    padding: 40px 40px 30px;
+}
+.what-people-say .people-item .people-item-image {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 30px;
+}
+.what-people-say .people-item .people-item-title span + span {
+    font: 300 15px/1 'Roboto', sans-serif;
+    font-style: italic;
+    color: #333333;
+    margin-top: 15px;
+    display: block;
+}
+.what-people-say .people-item .people-item-title::after {
+    display: block;
+    content: "";
+    height: 3px;
+    width: 60px;
+    background-color: #f38181;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+/* ----- What People Say End  ----- */
+
 /* ===== Custom Style End ===== */

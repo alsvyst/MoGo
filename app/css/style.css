@@ -106,14 +106,12 @@ blockquote {
     margin-bottom: 40px;
     text-align: center;
 }
-.title::after,
-blockquote span::before,
-.blockquote span::before {
+.title::after {
+    display: block;
     content: "";
     height: 3px;
     width: 60px;
     background-color: #f38181;
-    display: block;
     margin: auto;
 }
 .title.section-title span:first-child {
@@ -150,7 +148,18 @@ blockquote span,
     font-family: 'Kaushan Script', cursive;
     font-size: 24px;
     color: #333333;
-    margin-top: 20px;
+    margin-top: 10px;
+    display: block;
+}
+blockquote span::before,
+.blockquote span::before{
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 4px;
+    content: "";
+    height: 3px;
+    width: 60px;
+    background-color: #f38181;
 }
 .btn {
     display: inline-block;
@@ -216,6 +225,28 @@ header#header nav a:hover {
 header#header nav a:hover::after {
     opacity: 1;
     bottom: -12px;
+}
+.slick-carousel-arrows button {
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    border: 3px solid #cccccc;
+    border-right-width: 0;
+    border-top-width: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -8.5px;
+}
+.slick-carousel-arrows button#prev {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    left: 30px;
+}
+.slick-carousel-arrows button#next {
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+    right: 30px;
 }
 
 /* ===== Default Components End ===== */
@@ -422,8 +453,6 @@ header#header nav a:hover::after {
 
 }
 .devices .devices-wrapper {
-    /*overflow: hidden;*/
-    /*max-height: 100vh;*/
     padding-top: 100px;
 }
 .devices .phone-l-image {
@@ -479,7 +508,6 @@ header#header nav a:hover::after {
             transform: rotate(135deg);
     top: 28px;
 }
-
 .what-we-do #accordion div {
     overflow-y: auto;
     height: 145px;
@@ -495,10 +523,35 @@ header#header nav a:hover::after {
 
 /* ----- What We Do End ----- */
 
-/* ----- Quotes Start ----- */
+/* ----- Quote Start ----- */
 
-.quotes {
+.quote {
     background-color: #f8f8f8;
+}
+.quote .quote-wrapper {
+    position: relative;
+    padding: 0 110px;
+}
+.quote .quote-carousel .quote-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.quote .quote-carousel .quote-item .quote-image {
+    height: 150px;
+    width: 150px;
+    border: 1px solid #95e1d3;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    text-align: center;
+    line-height: 150px;
+    margin-right: 60px;
+}
+.quote .quote-carousel .quote-item .quote-image img {
+    display: inline;
 }
 
 /* ----- Quotes End ----- */
@@ -554,5 +607,28 @@ header#header nav a:hover::after {
 }
 
 /* ----- Some Work End  ----- */
+
+/* ----- Reviews Start  ----- */
+
+.reviews .reviews-wrapper {
+    position: relative;
+    padding: 0 60px;
+}
+.reviews .reviews-carousel .reviews-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 50px;
+}
+.reviews .reviews-carousel .reviews-item .reviews-image {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 30px;
+}
+
+/* ----- Reviews End  ----- */
 
 /* ===== Custom Style End ===== */

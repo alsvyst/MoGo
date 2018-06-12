@@ -25,7 +25,7 @@ a{
 }
 a:hover, a:active{
     text-decoration: none;
-    color: #8bc34a;
+    color: #95e1d3;
 }
 ul, ol{
     list-style: none;
@@ -606,7 +606,7 @@ header#header nav a:hover::after {
     background: url('../img/what-people-say-bg.jpg') no-repeat center / cover;
 }
 .what-people-say .people-item {
-    padding: 40px 40px 30px;
+    padding: 60px 40px 20px;
 }
 .what-people-say .people-item .people-item-image {
     flex-shrink: 0;
@@ -630,5 +630,56 @@ header#header nav a:hover::after {
 }
 
 /* ----- What People Say End  ----- */
+
+/* ----- Latest Blog Start  ----- */
+
+.latest-blog .blog-item .blog-item-image {
+    position: relative;
+}
+.latest-blog .blog-item .blog-item-image .blog-item-data {
+    position: absolute;
+    height: 70px;
+    width: 60px;
+    background-color: #95e1d3;
+    color: #ffffff;
+    bottom: 10px;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.latest-blog .blog-item .blog-item-image .blog-item-data span:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+.latest-blog .blog-item .blog-item-image .blog-item-data span:last-child {
+    display: block;
+    font: 300 15px/1 'Roboto', sans-serif;
+    font-style: italic;
+    margin-top: 2px;
+}
+.latest-blog .blog-item > a > span {
+    margin: 20px 0 10px;
+    transition: all linear .25s;
+}
+.latest-blog .blog-item > a:hover + a > span,
+.latest-blog .blog-item > a > span:hover {
+    color: #95e1d3;
+}
+.latest-blog .blog-item > p {
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.latest-blog .blog-item .blog-item-info img {
+    margin-right: 6px;
+}
+.latest-blog .blog-item .blog-item-info img + span {
+    margin-right: 20px;
+}
+
+/* ----- Latest Blog End  ----- */
 
 /* ===== Custom Style End ===== */
